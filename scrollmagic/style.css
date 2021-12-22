@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    counter-reset: page;
+}
+.about, .list-item {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about div {
+    display: flex;
+}
+
+#current_page {
+    margin-right: 0.5rem;
+}
+
+.about {
+    flex-direction: column;
+}
+
+#one {
+    background: #dddddd;
+}
+
+#two {
+    background: #86a896;
+}
+
+#three {
+    background: #dddddd;
+}
+
+#four {
+    background: #ddc1c1;
+}
+
+#five {
+    background: #dddddd;
+}
+
+.content {
+    height: 500vh;
+    display: flex;
+    animation: transition 1s;
+}
+
+#text {
+    position: absolute;
+    font-family: 'Actor';
+    font-weight: bold;
+    width: 50%;
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    color: #ffffff;
+}
+
+#text h1{
+    text-align: center;
+}
+
+.about, .navbar {
+    font-family: 'Actor';
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    text-decoration: none;
+    width: 50%;
+    margin: 0!important;
+}
+
+.about div {
+    margin: 1rem;
+}
+
+.list {
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.list-item {
+    justify-content: space-around;
+}
+
+img {
+    width: 70%;
+    aspect-ratio: 1;
+}
+
+.current {
+    text-decoration: none;
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    animation: transition 1s;
+}
+
+.next {
+    font-style: normal;
+    color: black;
+}
+
+.next:hover {
+    color: gray;
+    transition: 0.5s;
+}
+
+.navbar {
+    display: flex;
+    height: 0;
+    visibility: collapse;
+    width: 100%;
+    position: fixed;
+    background: #ffffff;
+}
+
+.commissioned, .editorial {
+    margin: 0 0 1rem 1rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+}
+@keyframes transition {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .navbar {
+        visibility: visible;
+        padding: 0 0 1.5rem 0;
+        text-decoration: none;
+    }
+    .about {
+        visibility: collapse;
+        width: 0%;
+    }
+    #text {
+        width: 100%;
+    }
+    .list{
+        width: 100%;
+    }    
+    .list-item {
+        width: 100%;
+    }
+    @keyframes transition {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(1%);
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    img {
+        width: 90%;
+    }
+    .list-item {
+        height: 80vh; 
+    }
+    #text {
+        margin-top: -20vh;
+    }
+}
